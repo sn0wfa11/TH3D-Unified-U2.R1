@@ -47,7 +47,7 @@
 #endif
 
 #if ENABLED(EZBOARD)
-  #define USE_CONTROLLER_FAN
+  //#define USE_CONTROLLER_FAN              // **MY SETTING** Disable Controler Fan
   #if ENABLED(USE_CONTROLLER_FAN)
     #define CONTROLLER_FAN_PIN P1_22       // Set a custom pin for the controller fan
     #define CONTROLLERFAN_SECS 60          // Duration in seconds for the fan to run after all motors are disabled
@@ -55,7 +55,7 @@
   #endif
 #endif
 
-#define E0_AUTO_FAN_PIN -1
+#define E0_AUTO_FAN_PIN P1_22               // **MY SETTING** Set hotend fan to turn on at 50C
 #define E1_AUTO_FAN_PIN -1
 #define E2_AUTO_FAN_PIN -1
 #define E3_AUTO_FAN_PIN -1
