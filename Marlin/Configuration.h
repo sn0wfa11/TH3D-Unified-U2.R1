@@ -60,7 +60,7 @@
 //#define CR10S_S5
 
 // Ender Series -------------------------------------------------------------
-//#define ENDER3
+#define ENDER3
 //#define ENDER5
 //#define ENDER5_PLUS
 
@@ -84,7 +84,7 @@
 //#define TM3DAERO                 //TM3D Aero Mount for V6
 //#define TM3DAERO_EXTENDED        //TM3D Arto Mount for Volcano
 //#define PETSFANG                 //This is the RIGHT mounted version
-//#define CUSTOM_PROBE             //For any other probe mount (also used for BL Touch), Enter offsets below
+#define CUSTOM_PROBE             //For any other probe mount (also used for BL Touch), Enter offsets below
 
 // Ender 5 Plus ONLY ABL Settings -------------------------------------------
 // By default the Ender 5 Plus comes with a BL Touch. Enabling the ENDER5_PLUS_EZABL or ENDER5_PLUS_NOABL will override the BL Touch setting
@@ -142,7 +142,7 @@
 // If you want to change how far in or out the probe senses change EZABL_PROBE_EDGE value below
 // Most Machines - 35
 // Binder Clips? - 50
-#define EZABL_PROBE_EDGE 35
+#define EZABL_PROBE_EDGE 40
 
 // If you have issues with your machine running the faster probe setting disable the #define EZABL_FASTPROBE below.
 // NOTE: Most machines will work with the fast probe enabled. Use M48 to verify accuracy.
@@ -163,7 +163,7 @@
 
 // If you want a more granular control over the babystepping uncomment the below line.
 // This will make the adjustment finer than the standard setting.
-//#define FINE_BABYSTEPPING
+#define FINE_BABYSTEPPING
 
 // This will extrapolate the implied tilt of the bed outside of the probe area. Do not comment out unless directed by support.
 #define EZABL_OUTSIDE_GRID_COMPENSATION
@@ -197,7 +197,7 @@
   * Specify a Probe position as { X, Y, Z }
   * Do NOT enter an number for the Z position in here. Store your offset in EEPROM.
   */
-  #define NOZZLE_TO_PROBE_OFFSET { 10, 10, 0 }
+  #define NOZZLE_TO_PROBE_OFFSET { -45, -4, 0 }
 #endif
 
 //===========================================================================
@@ -213,9 +213,9 @@
 // If you need to reverse the e motor direction also enabled the REVERSE_E_MOTOR_DIRECTION option.
 // Example EStep Values: TH3D Aluminum Extruder - 95 ESteps, TH3D Tough Extruder - 463 ESteps, BMG Extruder - 415 ESteps
 // When installing a Tough Extruder or E3D Titan or Bondtech that is Geared you likely need to enable the REVERSE_E_MOTOR_DIRECTION option
-//#define CUSTOM_ESTEPS
-//#define REVERSE_E_MOTOR_DIRECTION
-#define CUSTOM_ESTEPS_VALUE 463
+#define CUSTOM_ESTEPS
+#define REVERSE_E_MOTOR_DIRECTION
+#define CUSTOM_ESTEPS_VALUE 412
 
 // If you are using a pancake stepper enable the PANCAKE_STEPPER option to reduce the motor current to lower the stepper temperature
 //#define PANCAKE_STEPPER
@@ -233,7 +233,7 @@
 //#define V6_HOTEND
 
 // If you are using a Tough Hotend from TH3D or any thermistors TH3D sells for your hotend uncomment the below line.
-//#define TH3D_HOTEND_THERMISTOR
+#define TH3D_HOTEND_THERMISTOR
 
 // If you are using a thermistor TH3D sells for your bed uncomment the below line.
 //#define TH3D_BED_THERMISTOR
@@ -275,10 +275,10 @@
 // MISC --------------------------------------------
 
 // If you have a 5015 fan that whines when under 100% speed uncomment the below line.
-//#define FAN_FIX
+#define FAN_FIX
 
 // Use your own printer name
-//#define USER_PRINTER_NAME "CHANGE ME"
+#define USER_PRINTER_NAME "Aneela"
 
 // If your printer is homing to the endstops hard uncomment this to change the homing speed/divisor to make it less aggressive.
 //#define SLOWER_HOMING
@@ -298,7 +298,7 @@
 
 // LINEAR ADVANCE ----------------------------------
 // See here on how to use Linear Advance: http://marlinfw.org/docs/features/lin_advance.html
-//#define LINEAR_ADVANCE
+#define LINEAR_ADVANCE
 // Change the K Value here or use M900 KX.XX in your starting code (recommended).
 #define LINEAR_ADVANCE_K 0
 
